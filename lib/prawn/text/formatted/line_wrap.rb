@@ -21,6 +21,7 @@ module Prawn
 
         # The number of spaces in the last wrapped line
         attr_reader :space_count
+        attr_reader :arranger
 
         # Whether this line is the last line in the paragraph
         def paragraph_finished?

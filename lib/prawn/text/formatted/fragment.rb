@@ -32,7 +32,7 @@ module Prawn
 
         def width
           if @word_spacing.zero? then @width
-          else @width + @word_spacing * space_count
+          else @width + @word_spacing * (space_count.zero? ? 1 : space_count)
           end
         end
 
