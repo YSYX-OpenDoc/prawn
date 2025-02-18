@@ -270,7 +270,7 @@ module Prawn
           @previous_fragment = @fragment_output.dup
           pf = @previous_fragment
           @previous_fragment_ended_with_breakable =
-            pf =~ /[#{break_chars(pf.encoding)}]$/
+            pf =~ /[#{break_chars(pf.encoding)}。，？）】、；’”》]$/
           last_word = pf.slice(/[^#{break_chars(pf.encoding)}]*$/)
           last_word_length = last_word.nil? ? 0 : last_word.length
           @previous_fragment_output_without_last_word =
